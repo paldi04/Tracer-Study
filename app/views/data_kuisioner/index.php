@@ -31,9 +31,9 @@
         <br>
         4. Data tersebut sangat dibutuhkan untuk institusi yaitu dalam kegiatan Akreditasi</p>
       </div>
-				<?php if (isset($_POST['error'])) : ?>
+				<?php if (isset($_SESSION['error'])) : ?>
 				<div class="alert alert-danger" role="alert">
-  				<?= $_POST['error'];?>
+  				<?= $_SESSION['error'];?>
 				</div>
 
       <div class="row">
@@ -45,7 +45,7 @@
             <div class="row">
               <div class="col-md-6">
                 <label>Nomor Induk Mahasiswa</label>
-                <input type="number" class="form-control" name="nim" autocomplete="off" value="<?= $data['nim'];?>" required>
+                <input type="number" class="form-control" name="nim" autocomplete="off" value="<?= $data['nim'];?>" required readonly>
               </div>
               <div class="col-md-6">
                 <label>Bulan dan Tahun Lulus</label>
@@ -57,7 +57,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                 </div>
-                <input type="text" class="form-control" name="nama" autocomplete="off" value="<?= $data['nama'];?>" required>                
+                <input type="text" class="form-control" name="nama" autocomplete="off" value="<?= $data['nama'];?>" required readonly>                
               </div>
             </div>
             <div class="col-md-6">

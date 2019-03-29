@@ -23,7 +23,6 @@ class user_kuisioner extends Dojo_model
       ];
 
       $query = $this->db->insert_data('user_complete_data', $data);
-      echo $query;
       if ($query > 0)
       {
         $_SESSION['form_checked'] = true;
@@ -31,15 +30,13 @@ class user_kuisioner extends Dojo_model
               document.location.href= 'questions';
               </script>";
       }
-
       else
       {
-        // pesan error ketika data gagal dimasukan ke db
-        $_POST['error'] = "Data anda gagal dimasukan ke databaase";
-        unset($_POST['error']);
+        // pesan error ketika user sebelum nya sudah memasukan data, dan gagal gagal dimasukan
+        echo "<script>alert('anda sudah mengisi ini sebelumnya');
+              document.location.href= 'questions';
+              </script>";
       }
-
-    }
-    
+    }    
   }
 }

@@ -1,48 +1,44 @@
 <?php
 
+
 class generate_questions extends Dojo_model
 {
+  protected $nim,
+            $nama,
+            $status,
+            $sub_jawaban;
+  public function __construct()
+  {
+    unset($_SESSION['success']);
+    parent::__construct();
+    $this->nim = $_SESSION['nim'];
+    $this->nama = $_SESSION['nama'];
+    $this->prodi = $_SESSION['prodi'];
+    
+  }
   public function execute_input()
   {
-    $nim = $_SESSION['nim'];
-    $nama = $_SESSION['nama'];
-
-    if (isset($_POST['submit']))
+    if (isset($_POST['next']))
     {
-      $result = $this->query_db();
-      if (count($result) > 0)
+      $query = $this->db->get_where('jawaban_user', ['nim' => $this->nim]);
+      if(count($query) > 0)
       {
-        $data = [
-          'nim' => $nim,
-          'nama' => $nama
-        ];
-        $query_exec = $this->db>insert_data('jawaban_user', $data);
-
-        if($query_exec > 0 )
-        {
-          $rows = [
-            'status_setelah_lulus' => $_POST['status']
-          ];
-          $this->db->update_data('jawaban_user', $rows, [['nim' => $nim]]);
-        }
+        // ketika jawaban user sudah ada di db, namun user tsb mencoba ngisi form lagi
+        $_SESSION['error'] = "Anda sudah pernah mengisi ini sebelumnya";
       }
       else 
       {
-
+        $_SESSION['next_quest'] = true;
+        $this->status = $_POST['status'];
+            $_SESSION['data_user'] = [
+              'nim' => $this->nim,
+              'nama' => $this->nama,
+              'prodi' => $this->prodi,
+              'status_setelah_lulus' => $this->status
+            ];
+        echo "<script>document.location.href='Questions/one'</script>";
+        exit;
       }
     }
   }
-
-  public function query_db()
-  {
-    $nim = $_SESSION['nim'];
-    $nama = $_SESSION['nama'];
-    $specific_data = [ 
-      'nim' => $nim,
-      'nama' => $nama
-    ];
-    $this->db->where($specific_data);
-    return $this->db->get_data('jawaban_user');
-  }
-
 }

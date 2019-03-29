@@ -3,7 +3,7 @@
 #URL to your dojomvc root. Typically this will be your base URL,
 #WITH a trailing slash:
 # http::/localhost/myproject/
-$config['base_url'] = 'http://localhost/project-tracer-study/';
+$config['base_url'] = 'http://localhost/Tracer-Study/';
 
 # database config
 #	['hostname'] The hostname of your database server.

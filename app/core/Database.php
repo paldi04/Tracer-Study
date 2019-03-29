@@ -63,6 +63,7 @@ class Database
     $this->stmt = $this->conn->query($this->stmt);
     $this->query_result = $query_result;
     return $this->$query_result();
+
   }
 
   public function get_where($table, $cond, $select = null, $orderBy = null, $limit = null, $query_result = 'assoc_array')
@@ -138,9 +139,9 @@ class Database
       }
     }
     $str2 .= ')';
+
     $query =  "INSERT INTO $table $str VALUES $str2";
     $this->stmt = $this->conn->query($query);
-    echo $this->conn->error;
     return $this->conn->affected_rows;
   }
 

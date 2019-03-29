@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 28, 2019 at 03:49 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.2.15
+-- Host: localhost
+-- Generation Time: Mar 28, 2019 at 06:50 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,7 +34,7 @@ CREATE TABLE `jawaban_user` (
   `nama` varchar(128) NOT NULL,
   `prodi` varchar(128) NOT NULL,
   `status_setelah_lulus` varchar(128) NOT NULL,
-  `sub-jawaban` varchar(128) NOT NULL
+  `sub_jawaban` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -56,7 +56,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama`, `prodi`, `nim`, `password`) VALUES
-(1, 'paldi fhadillah', 's1 informasi', '12', '13');
+(2, 'gagas', 's1 teknik informasi', '1818', 'rock');
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE `user_complete_data` (
 --
 
 INSERT INTO `user_complete_data` (`id`, `nim`, `tanggal_lulus`, `tanggal_masuk`, `nama`, `prodi`, `kelamin`, `tanggal_lahir`, `email`, `telepon`, `facebook`, `twitter`, `linkedIn`) VALUES
-(1, '12', '2019-03-28', '2019-03-28', 'paldi fhadillah', 's2 teknik elektro komunikasi', 'laki-laki', '2019-03-28', 'sdsa@gmail.com', '1232141', 'dsadas', 'sada', 'adsa');
+(9, '1818', '1212-02-13', '1237-12-04', 'gagas', 's1 sistem informasi', 'laki-laki', '2521-12-05', 'gags@gmail.com', '8198', 'gagasss', 'mgagas', 'gagasm');
 
 --
 -- Indexes for dumped tables
@@ -125,13 +125,13 @@ ALTER TABLE `jawaban_user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_complete_data`
 --
 ALTER TABLE `user_complete_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

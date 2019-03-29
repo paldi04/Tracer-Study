@@ -36,10 +36,21 @@ class Authuser extends Dojo_model
 
       $query = $this->db->self_query("SELECT * FROM user WHERE nim = '$nim'");
       if (count($query) > 0)
-      {        
-        $_SESSION['nim'] = $query[0]['nim'];  
-        $_SESSION['nama'] = $query[0]['nama'];
-        echo "<script>document.location.href='Kuisioner'</script>";
+      { 
+        if ($query[0]['password'] == $password)
+        {
+          $_SESSION['nim'] = $query[0]['nim'];  
+          $_SESSION['nama'] = $query[0]['nama'];
+          $_SESSION['prodi'] = $query[0]['prodi'];
+          echo "<script>document.location.href='Kuisioner'</script>";
+        }
+        else 
+        {
+          $_SESSION['errortype'] = "danger";
+          // pesan ketika login gagal
+          $_SESSION['msg'] = "Login gagal";
+          session_destroy();   
+        }
       }
       else 
       {
@@ -50,5 +61,4 @@ class Authuser extends Dojo_model
       }
     }
   }
-
 }
