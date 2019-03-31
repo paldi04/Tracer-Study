@@ -1,6 +1,4 @@
 <?php
-
-
 class generate_questions extends Dojo_model
 {
   protected $nim,

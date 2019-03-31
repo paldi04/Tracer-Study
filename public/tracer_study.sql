@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2019 at 06:50 AM
+-- Generation Time: Mar 28, 2019 at 09:55 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -81,13 +81,6 @@ CREATE TABLE `user_complete_data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user_complete_data`
---
-
-INSERT INTO `user_complete_data` (`id`, `nim`, `tanggal_lulus`, `tanggal_masuk`, `nama`, `prodi`, `kelamin`, `tanggal_lahir`, `email`, `telepon`, `facebook`, `twitter`, `linkedIn`) VALUES
-(9, '1818', '1212-02-13', '1237-12-04', 'gagas', 's1 sistem informasi', 'laki-laki', '2521-12-05', 'gags@gmail.com', '8198', 'gagasss', 'mgagas', 'gagasm');
-
---
 -- Indexes for dumped tables
 --
 
@@ -119,7 +112,7 @@ ALTER TABLE `user_complete_data`
 -- AUTO_INCREMENT for table `jawaban_user`
 --
 ALTER TABLE `jawaban_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -131,7 +124,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_complete_data`
 --
 ALTER TABLE `user_complete_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

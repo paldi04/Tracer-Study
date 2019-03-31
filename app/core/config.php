@@ -19,7 +19,7 @@ $database['database'] = 'tracer study';
 
 # controllers & method default
 # if the user types the controller in a url that does not exist, the default controller will be used and the default controller will run when a web is opened, each controller must have a default method with the name index.
-$config['controller_default'] = 'home';
+$config['controller_default'] = 'Home';
 $config['method_default']      = 'index';
 
 

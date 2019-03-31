@@ -38,11 +38,10 @@
         3. Evaluasi proses pembelajaran & kontribusi pendidikan tinggi
         <br>
         4. Data tersebut sangat dibutuhkan untuk institusi yaitu dalam kegiatan Akreditasi</p>
-        <?php if (isset($_SESSION['message'])) : ?>
-        <div class="alert alert-success" role="alert">
-          <?= $_SESSION['message'];?>
-        </div>
-        <?php endif;?>
+      <?php if (isset($_SESSION['message'])) :?>
+        <a href="<?= $this->base_url . "Home" ?>" class="btn btn-primary">kehalaman utama</a>
+      <?php unset($_SESSION['message']);?>
+      <?php endif;?>
       </div>
       <?php if($data['checkstats'] == "bekerja") : ?>
       <div class="row">
@@ -57,12 +56,12 @@
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="sub-quest" value="tidak bekerja" rquired>
+              <input class="form-check-input" type="radio" name="sub-quest" value="wiraswasta" rquired>
               <label class="form-check-label">
                 Wiraswasta
               </label>
             </div>
-            <button type="submit" name="submit" class="btn btn-primary" >berikutnya!</button>
+            <button type="submit" name="next_quest" class="btn btn-primary" >berikutnya!</button>
           </form>
           </div>
         </div>
@@ -83,7 +82,7 @@
               <option value="Ya, tapi saya belum pasti akan bekerja dalam 2 minggu ke depan">Ya, tapi saya belum pasti akan bekerja dalam 2 minggu ke depan</option>
             </select>
           </div>              
-            <button type="submit" name="submit" class="btn btn-primary" >berikutnya!</button>
+            <button type="submit" name="submit" class="btn btn-primary" >Submit!</button>
           </form>
           </div>
         </div>
@@ -96,9 +95,9 @@
           <form method="post" action="">
           <div class="form-group">
             <label>Nama universitas(tempat study lanjut)</label>
-            <input name="sub-quest" type="text" class="form-control">
+            <input name="sub-quest" type="text" class="form-control" autocomplete="off">
           </div>
-            <button type="submit" name="submit" class="btn btn-primary" >berikutnya!</button>
+            <button type="submit" name="submit" class="btn btn-primary" >Submit!</button>
           </form>
           </div>
         </div>
