@@ -62,8 +62,34 @@
 							<div class="form-group">	
     						<label>Prodi</label>
 								<select class="form-control" name="prodi" autocomplete="off" required>
-									<option value="s1 informasi">s1 informasi</option>
-									<option value="s1 informatika">s1 informatika</option>
+									  <option value="S2 Teknik Elektro Komunikasi">S2 Teknik Elektro Komunikasi</option>
+					                  <option value ="S2 Teknik Informatika">S2 Teknik Informatika</option>
+					                  <option value="S2 Manajemen">S2 Manajemen</option>
+					                  <option value="S1 Teknik Telekomunikasi">S1 Teknik Telekomunikasi</option>
+					                  <option value="S1 Teknik Elektro">S1 Teknik Elektro</option>
+					                  <option value="S1 Teknik Fisika">S1 Teknik Fisika</option>
+					                  <option value="S1 Sistem Komputer">S1 Sistem Komputer</option>
+					                  <option value="S1 Teknik Industri">S1 Teknik Industri</option>
+					                  <option value="S1 Sistem Informasi">S1 Sistem Informasi</option>
+					                  <option value="S1 Teknik Informatika">S1 Teknik Informatika</option>
+					                  <option value="S1 Ilmu Komputasi">S1 Ilmu Komputasi</option>
+					                  <option value="S1 Manajemen Bisnis Telekomunikasi & Informatika">S1 Manajemen Bisnis Telekomunikasi & Informatika</option>
+					                  <option value="S1 International ICT Business">S1 International ICT Business</option>
+					                  <option value="S1 Akuntansi">S1 Akuntansi</option>
+					                  <option value="S1 Administrasi Bisnis">S1 Administrasi Bisnis</option>
+					                  <option value="S1 Ilmu Komunikasi">S1 Ilmu Komunikasi</option>
+					                  <option value="S1 Desain Komunikasi Visual">S1 Desain Komunikasi Visual</option>
+					                  <option value="S1 Seni Rupa Murni">S1 Seni Rupa Murni</option>
+					                  <option value="S1 Desain Interior">S1 Desain Interior</option>
+					                  <option value="S1 Desain Produk">S1 Desain Produk</option>
+					                  <option value="S1 Kriya Tekstil dan Mode">S1 Kriya Tekstil dan Mode</option>
+					                  <option value="D3 Teknik Telekomunikasi">D3 Teknik Telekomunikasi</option>
+					                  <option value="D3 Teknik Informatika">D3 Teknik Informatika</option>
+					                  <option value="D3 Manajemen Informatika">D3 Manajemen Informatika</option>
+					                  <option value="D3 Teknik Komputer">D3 Teknik Komputer</option>
+					                  <option value="D3 Komputerisasi Akuntansi">D3 Komputerisasi Akuntansi</option>
+					                  <option value="D3 Manajemen Pemasaran">D3 Manajemen Pemasaran</option>
+					                  <option value="D3 Perhotelan">D3 Perhotelan</option>
 								</select>
 							</div>
 							<div class="form-check">
